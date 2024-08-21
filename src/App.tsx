@@ -1,11 +1,19 @@
-import './App.css'
-import SearchAppBar from './searchAppBar'
+import "./App.sass";
+import SearchAppBar from "./searchAppBar";
+import TheFooter from "./TheFooter";
 
 function App() {
-
   return (
-    <SearchAppBar />
-  )
+    <>
+      <div className="app-container">
+        <div className="body">
+          <SearchAppBar />
+          <div className="content"></div>
+        </div>
+        <TheFooter />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
