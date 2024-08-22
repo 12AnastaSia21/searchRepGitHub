@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import "./TheSidebar.sass";
 
 export default function TheSidebar() {
-  return (
+    return (
     <aside className="sidebar-container">
       <h2>Название проекта</h2>
       <div className="basic-info">
