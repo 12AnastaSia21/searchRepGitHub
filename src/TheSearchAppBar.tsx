@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
-import './SearchBar.sass'
+import './TheSearchAppBar.sass'
 
-export default function SearchAppBar() {
+export default function TheSearchAppBar() {
   return (
     
       <div className="header-container">

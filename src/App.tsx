@@ -1,5 +1,5 @@
 import "./App.sass";
-import SearchAppBar from "./searchAppBar";
+import TheSearchAppBar from "./TheSearchAppBar";
 import TheFooter from "./TheFooter";
 import TheSidebar from "./TheSidebar";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="app-container">
-        <SearchAppBar />
+        <TheSearchAppBar />
         <div className="body">
           <div className="content"></div>
           <TheSidebar />
