@@ -16,7 +16,7 @@ export default function TheSidebar() {
        <div className="basic-info">
          <Chip label="Язык" color="primary" />
          <div className="star-info">
-           <StarIcon />
+           <StarIcon className="color-star" />
            <Typography className="number-of-stars" variant="body2" gutterBottom>
              9 800 000
            </Typography>

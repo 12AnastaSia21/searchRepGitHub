@@ -1,7 +1,9 @@
-import WelcomePage from "./WelcomePage";
+//import WelcomePage from "./WelcomePage";
+import RepositoryInfo from "./RepositoryInfo"
 
 export default function TheMain() {
   return (
-  <WelcomePage />
+    <RepositoryInfo />
+  //<WelcomePage />
 )
 }
