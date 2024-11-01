@@ -1,9 +1,15 @@
-//import WelcomePage from "./WelcomePage";
-import RepositoryInfo from "./RepositoryInfo"
+import TheWelcomePage from "./TheWelcomePage";
+import RepositoryInfo from "./RepositoryInfo";
 
-export default function TheMain() {
+interface TheMainProps {
+  isSearching: boolean;
+  searchQuery: string; // Добавляем пропс для текста поиска
+}
+
+export default function TheMain({ isSearching, searchQuery }: TheMainProps) {
   return (
-    <RepositoryInfo />
-  //<WelcomePage />
-)
+    <>
+      {isSearching ? <RepositoryInfo query={searchQuery} /> : <TheWelcomePage />}
+    </>
+  );
 }
