@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './stores/store';
-import { selectRepo, fetchRepositories } from './stores/slices/githubSlice';
+import { selectRepo, fetchRepositories, fetchTopics } from './stores/slices/githubSlice';
 import { DataGrid, GridColDef, GridRowParams } from "@mui/x-data-grid";
 import "./RepositoryInfo.sass";
 import { Typography } from "@mui/material";
@@ -34,7 +34,10 @@ export default function RepositoryInfo({ query }: RepositoryInfoProps) {
 
   const handleRowClick = (params: GridRowParams) => {
     const repo = repositories.find((repo) => repo.id === params.id);
-    if (repo) dispatch(selectRepo(repo));
+    if (repo) {
+      dispatch(selectRepo(repo));
+      dispatch(fetchTopics({ owner: repo.owner.login, repo: repo.name }));
+    }
   };
 
   return (
